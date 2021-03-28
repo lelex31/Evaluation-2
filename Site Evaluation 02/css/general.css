@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body, html{
+  height:100%;
+  background: linear-gradient(to right, rgb(230, 230, 230) 0%, rgb(230, 230, 230) 50%,white 50%, white 100%);
+}
+
+
+
+.button {
+  padding: 5px 10px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background: none;
+  background-color:none;
+  border-radius: 10px;
+  border: none;
+  }
+
+.button:hover {background-color: #fffcd5}
+
+.button:active {
+    border: 0px;
+    transform: translateY(4px);
+}
+
+.button:focus{
+  outline: none;
+}
+
+.grid_container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-row: 2;
+	  gap: 0px;
+	  margin: 0px;	
+}
+.content_gauche {
+	  grid-column-start: 1;
+	  grid-column-end: 6;
+    grid-row-start: 1;
+}
+.content_droite {
+  grid-column-start: 6;
+  grid-column-end: 11;
+  grid-row-start: 1;
+}
+
+.content_gauche_current {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.content_droite_current {
+grid-column-start: 8;
+grid-column-end: 8;
+grid-row-start: 1;
+grid-row-end: 2;
+}
+
+
+.content_center{
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.Player{
+  width: 50%;
+  display: absolute;
+  font-size: 48px;
+  color: grey;
+}
+
+.Score_Player{
+  font-size: 90px;
+  color: red;
+}
+
+.De{
+  font-size: 90px;
+  color: red;
+}
+
+.Current_Score{
+  background-color: rgb(201, 57, 31);
+  padding: 10px;
+}
+
+.Current_Score_Player{
+  font-size: 90px;
+  color: white;
+
+}
+
+
