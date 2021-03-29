@@ -39,7 +39,7 @@ body, html{
     display: grid;
     width: 100%;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-row: 2;
+    grid-row: 1;
 	  gap: 0px;
 	  margin: 0px;	
 }
@@ -82,7 +82,7 @@ grid-row-end: 2;
   color: grey;
 }
 
-.Score_Player{
+.ROUND_Player{
   font-size: 90px;
   color: red;
 }
@@ -92,15 +92,14 @@ grid-row-end: 2;
   color: red;
 }
 
-.Current_Score{
+.GLOBAL_Score{
   background-color: rgb(201, 57, 31);
-  padding: 10px;
+  padding: 20px 0px 0px 0px;
 }
 
-.Current_Score_Player{
-  font-size: 90px;
+.GLOBAL_Score_Player{
+  font-size: 50px;
   color: white;
-
 }
 
 

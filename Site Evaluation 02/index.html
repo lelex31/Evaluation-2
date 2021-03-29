@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <script src="includes/jquery-3.5.1.min.js"></script>
 <script src="includes/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+<script src="js/game.js"></script>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -18,42 +20,42 @@
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="includes/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
-
-
     <link rel="stylesheet" type="text/css" href="css/general.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet" type="text/css">
-
-    
+    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet" type="text/css"> 
 </head>
+
 <body>
-
-
   <div style="text-align: center; padding: 20px,20px;">
-    <button type="button" class="button"><i class="bi bi-plus-circle" style="color: orangered;"></i> NEW GAME</button>
+    <button type="button" class="button" onclick="newgame()"><i class="bi bi-plus-circle" style="color: orangered;"></i> NEW GAME</button>
     <BR>
-    <label class="Player" id="Player1" style="float: left;">PLAYER 1 <i class="bi bi-record-fill" style="color:red;" hidden></i></label> 
-    <label class="Player" id="Player2" style="float: right;">PLAYER 2 <i class="bi bi-record-fill" style="color: red;" hidden></i></label>
+    <label class="Player" id="Player1" style="float: left;">PLAYER 1 <i class="bi bi-record-fill" id="jeton1" style="color:red;" hidden></i></label> 
+    <label class="Player" id="Player2" style="float: right;">PLAYER 2 <i class="bi bi-record-fill" id="jeton2" style="color: red;" hidden></i></label>
     <BR>
     <div class="grid_container">
-      <label class="content_gauche Score_Player" id="Score_Player1" style="color: red;">0</label>
-      <label class="content_droite Score_Player" id="Score_Player2" style="color: red;">0</label>
+      <label class="content_gauche ROUND_Player" id="ROUND_Player1" style="color: red;">0</label>
+      <label class="content_droite ROUND_Player" id="ROUND_Player2" style="color: red;">0</label>
       <label class="content_center De" id="De"><i class="bi bi-dice-1"></i></label>
     </div>
     <BR>
     <div class="grid_container">
-      <div class="content_gauche_current Current_Score" id="Current_Score_Player1">Current <BR><label class="Current_Score_Player" id="current_score_player1">0</label></div>
-      <div class="content_droite_current Current_Score" id="Current_Score_Player2">Current <BR><label class="Current_Score_Player" id="current_score_player2">0</label></div>
+      <div class="content_gauche_current GLOBAL_Score" id="Current_Score_Player1">
+        Current <BR>
+        <label class="GLOBAL_Score_Player" id="GLOBAL_Score_Player1">0</label></div>
       <div class="content_center De" id="De">
-        <button type="button" class="button"><i class="bi bi-arrow-repeat" style="color: orangered;"></i> ROLL DICE</button>
-        <button type="button" class="button"><i class="bi bi-box-arrow-down" style="color: orangered;"></i> HOLD</button>
+        <button type="button" class="button" id="btn_roll_dice" onclick="rolldice()" hidden><i class="bi bi-arrow-repeat" style="color: orangered;"></i> ROLL DICE</button>
+        <button type="button" class="button" id="btn_hold" hidden><i class="bi bi-box-arrow-down" style="color: orangered;"></i> HOLD</button>
+      </div>
+      <div class="content_droite_current GLOBAL_Score" id="Current_Score_Player2">
+        Current <BR>
+        <label class="GLOBAL_Score_Player" id="GLOBAL_Score_Player2">0</label>
       </div>
     </div>
 
-  </div>
-    
+  </div>  
+
 </body>
+
 </html>
 
 
