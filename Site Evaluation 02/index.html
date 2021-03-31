@@ -26,7 +26,7 @@
 </head>
 
 <body>
-  <div style="text-align: center; padding: 20px,20px;">
+  <div style="text-align: center">
     <button type="button" class="button" onclick="newgame()"><i class="bi bi-plus-circle" style="color: orangered;"></i> NEW GAME</button>
     <BR>
     <label class="Player" id="Player1" style="float: left;">PLAYER 1 <i class="bi bi-record-fill" id="jeton1" style="color:red;" hidden></i></label> 
@@ -41,18 +41,22 @@
     <div class="grid_container">
       <div class="content_gauche_current GLOBAL_Score" id="Current_Score_Player1">
         Current <BR>
-        <label class="GLOBAL_Score_Player" id="GLOBAL_Score_Player1">0</label></div>
+        <label class="GLOBAL_Score_Player" id="GLOBAL_Score_Player1">0</label>
+      </div>
       <div class="content_center De" id="De">
-        <button type="button" class="button" id="btn_roll_dice" onclick="rolldice()" hidden><i class="bi bi-arrow-repeat" style="color: orangered;"></i> ROLL DICE</button>
-        <button type="button" class="button" id="btn_hold" hidden><i class="bi bi-box-arrow-down" style="color: orangered;"></i> HOLD</button>
+        <button type="button" class="button" id="btn_roll_dice" onclick="rolldice_click()" hidden><i class="bi bi-arrow-repeat" style="color: orangered;"></i> ROLL DICE</button>
+        <button type="button" class="button" id="btn_hold" onclick="hold_click()" hidden><i class="bi bi-box-arrow-down" style="color: orangered;"></i> HOLD</button>
       </div>
       <div class="content_droite_current GLOBAL_Score" id="Current_Score_Player2">
         Current <BR>
         <label class="GLOBAL_Score_Player" id="GLOBAL_Score_Player2">0</label>
       </div>
     </div>
-
   </div>  
+
+  <noscript>
+    <p>Merci d'activer JavaScript afin de pouvoir bénéficier de toutes les fonctionnalités de notre site.</p>
+  </noscript>
 
 </body>
 
